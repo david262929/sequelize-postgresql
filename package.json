@@ -1,0 +1,27 @@
+{
+  "name": "sequelize-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "db:init": "./scripts/init.sh",
+    "db:insert:dummy": "./scripts/dummy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david262929/sequelize-postgresql.git"
+  },
+  "author": "David (david262929)",
+  "license": "ISC"
+}
