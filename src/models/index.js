@@ -10,7 +10,10 @@ const sequelize = new Sequelize(
   config.database,
   config.username,
   config.password,
-  config
+  {
+    ...config,
+    logging: false,
+  }
 )
 
 fs.readdirSync(__dirname)
