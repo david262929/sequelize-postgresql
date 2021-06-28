@@ -1,17 +1,19 @@
 module.exports = {
   "development": {
     "username": "postgres",
-    "password": "",
+    "password": "2018",
     "database": "parse_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "logging": false,
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": false,
   },
   "production": {
     "username": process.env.DB_USERNAME,
@@ -19,6 +21,7 @@ module.exports = {
     "database": process.env.DB_NAME,
     "host": process.env.DB_HOSTNAME,
     "dialect": process.env.DB_DIALECT,
+    "logging": false,
   }
 }
 

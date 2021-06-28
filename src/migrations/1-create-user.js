@@ -16,6 +16,11 @@ module.exports = {
       email: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
@@ -25,9 +30,13 @@ module.exports = {
         allowNull: false,
         type: DataTypes.DATE,
       },
+      token: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
     })
   },
-  down: async (queryInterface, DataTypes) => {
+  down: async (queryInterface) => {
     await queryInterface.dropTable('users')
   },
 }
